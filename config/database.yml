@@ -1,0 +1,23 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: postgres
+  user: postgres
+
+
+development:
+  <<: *default
+  database: commentsapi_development
+
+
+test:
+  <<: *default
+  database: commentsapi_test
+ 
+
+production:
+  <<: *default
+  database: commentsapi_production
+  username: commentsapi
+  password: <%= ENV['COMMENTSAPI_DATABASE_PASSWORD'] %>
