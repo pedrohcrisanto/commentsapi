@@ -1,24 +1,14 @@
-# README
+<h1>Comments Api</h1>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<h2>API desenvolvida por Pedro Crisanto para fins de teste de conhecimento.</h2>
+<h3>Instruções para configurar o projeto</h3>
 
-Things you may want to cover:
+    *(sudo) docker-compose run --rm app bundle install
 
-* Ruby version
+    *(sudo) docker-compose run --rm app bundle exec rails db:create db:migrate
 
-* System dependencies
+    *(sudo) docker-compose run --rm app bundle exec rails db:seed (Popular Banco de Dados)
 
-* Configuration
+    *(sudo) docker-compose run --rm website bundle exec rspec (Rodar os Testes)
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+    *(sudo) docker-compose up (subir aplicação)
