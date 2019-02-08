@@ -13,3 +13,18 @@ end
       password: Faker::IDNumber.valid
     )
 end
+2.times do |i|
+    Comment.create!(
+        text: Faker::Movie.quote,
+        user: User.all.sample,
+        event: Event.all.sample
+        )
+
+end
+    2.times do |i|
+    Report.create!(
+        comment: Comment.all.sample,
+        user: User.all.sample
+        )
+
+end
